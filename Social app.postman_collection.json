@@ -1,0 +1,426 @@
+{
+	"info": {
+		"_postman_id": "6c89b054-4848-4fbf-bceb-a048f660c051",
+		"name": "Social app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31975327"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Hobbies",
+					"item": [
+						{
+							"name": "Add Hobby",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Movies\",\r\n    \"description\": \"Watching Movies\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/65ed8596c13af4a6f20e03ef/hobbies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"65ed8596c13af4a6f20e03ef",
+										"hobbies"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Hobby",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Movies\",\r\n    \"description\": \"Watching Movies\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/users/65ed8596c13af4a6f20e03ef/hobbies/65ed8596c13af4a6f20e03f3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"users",
+										"65ed8596c13af4a6f20e03ef",
+										"hobbies",
+										"65ed8596c13af4a6f20e03f3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "All users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/users/65ed8596c13af4a6f20e03ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"65ed8596c13af4a6f20e03ef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"username\": \"johndoe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"birthData\": {\r\n    \"year\": 1990,\r\n    \"day\": 15,\r\n    \"month\": 6,\r\n    \"city\": \"New York\"\r\n  },\r\n  \"educationData\": {\r\n    \"schoolName\": \"ABC School\",\r\n    \"universityName\": \"XYZ University\",\r\n    \"schoolGraduationYear\": 2010,\r\n    \"universityGraduationYear\": 2014\r\n  },\r\n  \"hobbies\": [\r\n    {\r\n      \"name\": \"Reading\",\r\n      \"description\": \"I love reading books.\"\r\n    },\r\n    {\r\n      \"name\": \"Cooking\",\r\n      \"description\": \"I enjoy cooking new dishes.\"\r\n    }\r\n  ],\r\n  \"posts\": [] // Posts will be added later as they are created\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete user",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"John\",\r\n  \"lastName\": \"Doe\",\r\n  \"username\": \"johndoe\",\r\n  \"email\": \"johndoe@example.com\",\r\n  \"birthData\": {\r\n    \"year\": 1990,\r\n    \"day\": 15,\r\n    \"month\": 6,\r\n    \"city\": \"New York\"\r\n  },\r\n  \"educationData\": {\r\n    \"schoolName\": \"ABC School\",\r\n    \"universityName\": \"XYZ University\",\r\n    \"schoolGraduationYear\": 2010,\r\n    \"universityGraduationYear\": 2014\r\n  },\r\n  \"hobbies\": [\r\n    {\r\n      \"name\": \"Reading\",\r\n      \"description\": \"I love reading books.\"\r\n    },\r\n    {\r\n      \"name\": \"Cooking\",\r\n      \"description\": \"I enjoy cooking new dishes.\"\r\n    }\r\n  ],\r\n  \"posts\": [] // Posts will be added later as they are created\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/users/65ed8596c13af4a6f20e03ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"users",
+								"65ed8596c13af4a6f20e03ef"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "All posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/user/65ed8596c13af4a6f20e03ef",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"user",
+								"65ed8596c13af4a6f20e03ef"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/65edc1416d02c4d40854c4c5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"65edc1416d02c4d40854c4c5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete post",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/posts/65ed86982adfcde28795bdad",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts",
+								"65ed86982adfcde28795bdad"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"title\": \"Sample Post Title\",\r\n  \"description\": \"This is a sample post description.\",\r\n  \"user\": \"65ed8596c13af4a6f20e03ef\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/posts",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Create Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"second Comment\",\r\n    \"user\": \"65ed8596c13af4a6f20e03ef\",\r\n    \"post\": \"65edc1416d02c4d40854c4c5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Reply",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"text\": \"third level Comment\",\r\n    \"parentComment\": \"65edc2800be88789cd2726b2\",\r\n    \"user\": \"65ed8596c13af4a6f20e03ef\",\r\n    \"post\": \"65edc1416d02c4d40854c4c5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "All Comments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Single Comment",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/65ed80600cd3245ae5608f66",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"65ed80600cd3245ae5608f66"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/comments/65edc1856d02c4d40854c4d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"comments",
+								"65edc1856d02c4d40854c4d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
